@@ -1,0 +1,431 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* reset 結束 */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+
+
+/* css從這裡開始 */
+.wrap{
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: "微軟正黑體";
+}
+
+/* 社群條 */
+.media{
+    display: flex;
+    justify-content: end;
+    padding: 5px;
+    background: #f6f6f6e1;
+}
+.media  a{
+    text-decoration: none;
+    display: block;
+    margin-right: 2px;
+}
+.media span{
+    font-size: 16px;
+    color: #42beef;
+    padding-right: 3px;
+}
+.media .facebook span{
+    color: #4460a0;
+    font-size: 16px;
+}
+.facebook{
+    border-right: 3px solid #ccc;
+    margin-right: 4px;
+}
+.twitter{
+    margin-left: 2px;
+}
+
+/* 選單 */
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo  a {
+    width: 224px;
+    height: 50px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu{
+    display: flex;
+    
+}
+
+.menu li a{
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #66e0c2;
+    font-weight: bold;
+    border-bottom: 5px solid transparent;
+}
+
+.menu .dropdown{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 2px 2px 4px   rgb(225, 225, 225);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.menu .dropdown a{
+    padding: 12px;
+}
+
+.menu a:hover,.menu .drop.active{
+    border-bottom: 5px solid #66e0c2;
+}
+
+
+
+
+
+/* 圖片banner */
+.banner{
+    position: relative;
+    z-index: 0;
+    background-size: contain;
+}
+.banner h1{
+    position: absolute;
+    left: 40px;
+    top: 140px;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    z-index: 3;
+}
+
+
+.banner .blur{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* swiper */
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* 商品表 */
+.product-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.product-list a{
+    text-decoration: none;
+    color: black;
+}
+.item img{
+    display: block;
+    margin: 0 auto;
+}
+
+.item{
+    width: 30.333%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+    box-shadow: 0px 5px 10px -5px rgb(180, 179, 179)  ;
+}
+
+.item p,li{
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.product-list .item h2{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin:0 auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.item.rwd img{
+    padding-bottom: 50px;
+}
+
+.item.jQuery img{
+    padding-bottom: 15px;
+}
+
+.item.jQuery li{
+    list-style: disc;
+    margin-left: 20px;
+}
+
+
+/* 表格 */
+
+h3{
+    margin-top: 65px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold; 
+    padding-bottom: 20px;
+}
+
+.infro{
+    margin: 0 auto;
+    text-align: center;
+    line-height: 3.5;
+}
+
+.infro th{
+    font-weight: bold;
+    background: #f7f7f7;
+}
+
+
+.infro th,td{
+    border-bottom: 1px solid gainsboro;
+    border-top: 1px solid gainsboro;
+}
+
+.point{
+    color:#22b28e ;
+    font-weight: bold;
+}
+
+@media(max-width:767px){
+    .container{
+        overflow-x: auto;
+    }
+    .infro{
+        width: 800px;
+    }
+}
+
+/* 表單 */
+form{
+    margin-top: 60px;
+    background: linear-gradient(#00644b,#009872);
+    padding-bottom: 30px;
+}
+.text{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+textarea{
+    outline-style: none;
+    border: 0px;
+    border-radius: 3px;
+}
+form h4{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 35px;
+}
+
+form input{
+    width: 400px;
+    line-height:  1.5; 
+    outline-style: none;
+    border: 0px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+
+form li{
+    color: white;
+    padding: 10px 0px;
+}
+
+.btn.pure-button-active{
+    margin-left: 88%;
+    color: white;
+    background-color: #00cc99;
+    border: #00cc99;
+    padding: 10px ;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+@media(max-width:767px){
+    form{
+        padding-bottom: 0px;
+    }
+    .text{
+        flex-direction:column ;
+        margin-left: 5%;
+    }
+    textarea{
+        width: 90%;
+    }
+    form input{
+        width: 90%;
+    }
+    .btn.pure-button-active{
+        margin-right: 10px;
+        
+    }
+}
+
+/* 表尾 */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 55px;
+}
+.footerLogo  a {
+    width: 171px;
+    height: 36px;
+    background-image: url(../img/footerLogo.png);
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.footer li span{
+    color: #e12d80;
+}
+
+.footer li{
+    padding-bottom: 5px;
+}
+
+
+
+/* 回到頂端 */
+.top{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+}
+
+.top a{
+    width: 47px;
+    height: 50px;
+    background-image: url(../img/hex-logo.png);
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+
+@media(max-width:768px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner h1{
+        font-size: 25px;
+        top: 40%;
+        left: 40px;
+    }
+    .banner .blur{
+        top: 50px;
+        height: 50%;
+    }
+    .item{
+        width: 85%;
+        margin-left: 7.5%;
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerLogo {
+        margin-bottom: 3%;
+    }
+
+}
+

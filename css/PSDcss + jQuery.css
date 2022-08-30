@@ -128,18 +128,24 @@ img{
     border-bottom: 5px solid transparent;
 }
 
+.menu>li {
+    position: relative;
+}
+
 .menu .dropdown{
     display: none;
     position: absolute;
+    right: 0;
+    left: 0;
     z-index: 999;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: inset 2px 2px 4px   rgb(225, 225, 225);
     border-radius: 0px 0px 5px 5px;
+    
 }
 
 .menu .dropdown a{
-    padding: 12px;
-    
+    padding: 10px ;
 }
 
 .menu a:hover,.menu .drop.active{
@@ -162,8 +168,9 @@ img{
 }
 .banner h1{
     position: absolute;
+    text-align: start;
     left: 40px;
-    top: 140px;
+    top: 120px;
     font-size: 36px;
     font-weight: bold;
     color: white;
@@ -181,11 +188,14 @@ img{
     z-index: 2;
 }
 
+
 /* swiper */
 .swiper {
     width: 100%;
     height: auto;
+    text-align: center;
 }
+
 
 @media(max-width:768px){
     .header{
@@ -194,12 +204,11 @@ img{
     }
 
     .banner h1{
-        font-size: 25px;
         top: 40%;
         left: 40px;
     }
     .banner .blur{
-        top: 50px;
+        top: 30%;
         height: 50%;
     }
 }
@@ -264,7 +273,6 @@ img{
     .item{
         width: 85%;
         margin-left: 7.5%;
-        
     }
 
 }
